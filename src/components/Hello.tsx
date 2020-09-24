@@ -11,7 +11,7 @@ const Hello = (props: HelloProps) => {
   const [data, setData] = useState('initialState');
   return (
     <>
-      <div className={style.cr}>hello {props.name}</div>
+      <div className={style.cr}>hello111 {props.name}</div>
       <div>{data}</div>
       <input
         type="text"

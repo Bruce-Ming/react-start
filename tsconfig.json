@@ -21,12 +21,13 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@components/*":["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"]
 
     }
   },
   "include": [
     "./src/**/*", // 这个表示处理根目录的src目录下所有的.ts和.tsx文件，并不是所有文件
   ]
-  
+
 }
