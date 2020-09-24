@@ -1,13 +1,27 @@
-import React from "react"
-import style from "@components/index.scss"
+import React, { useState } from 'react';
+import style from '@components/index.scss';
 
-console.log(style)
+console.log(style);
 
 interface HelloProps {
-  name: string
+  name: string;
 }
 
 const Hello = (props: HelloProps) => {
-  return <div className={style.cr}>hello {props.name}</div>
-}
-export default Hello
+  const [data, setData] = useState('initialState');
+  return (
+    <>
+      <div className={style.cr}>hello {props.name}</div>
+      <div>{data}</div>
+      <input
+        type="text"
+        name="data"
+        value={data}
+        onChange={(e) => {
+          setData(e.target.value);
+        }}
+      />
+    </>
+  );
+};
+export default Hello;
