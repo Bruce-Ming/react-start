@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 import ThemeStore from '@stores/themeStore';
 import MobxStore from '@stores/MobxStore';
-import { NotesStore } from '@stores/notesStore';
+import { NotesStore } from '@stores/NotesStore';
 
 export interface IStore {
   themeStore: ThemeStore;

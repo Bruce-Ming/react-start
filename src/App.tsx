@@ -5,7 +5,9 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { useStore, GlobalProvider } from '@stores/index';
-import Notes from '@components/Notes';
+import * as style from './App.scss';
+
+const Notes = React.lazy(() => import('@components/Notes'));
 
 const App = () => {
   const store = useStore();
@@ -15,7 +17,7 @@ const App = () => {
     <>
       <Router>
         <nav>
-          <ul>
+          <ul className={style.head}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -38,10 +40,12 @@ const App = () => {
             <Hello name="zdm"></Hello>
           </Route>
           <Route path="/todo">
-            <Notes />
+            <React.Suspense fallback={null}>
+              <Notes />
+            </React.Suspense>
           </Route>
           <Route path="/">
-            <div>主页</div>
+            <div>主页测试</div>
             <div onClick={store.themeStore.toggleDarkMode}>{store.themeStore.isDarkMode}11111</div>
             <div>{store.mobxStore.name}</div>
             <div>{store.mobxStore.greeting}</div>

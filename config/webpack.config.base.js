@@ -64,7 +64,10 @@ module.exports = {
       publicPath: '/', //打包出来的main基本路径影响到路由
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash].css',
+      filename: '[name].[hash].css',
     }),
+    /* new PurgeCSSPlugin({
+      paths: glob.sync(path.resolve(__dirname, '../src/*'), { nodir: true }),
+    }), */
   ],
 };
