@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src/main.tsx'),
+  entry: path.resolve(__dirname, '../src/App.tsx'),
   output: {
     filename: '[name].[hash].js', // 打包出的结果文件
     path: path.resolve(__dirname, '../dist'), // 打包到dist目录下
@@ -52,6 +52,8 @@ module.exports = {
       '@components': path.resolve(__dirname, '../src/components'),
       '@pages': path.resolve(__dirname, '../src/pages'),
       '@utils': path.resolve(__dirname, '../src/utils'),
+      '@models': path.resolve(__dirname, '../src/models'),
+      '@stores': path.resolve(__dirname, '../src/stores'),
     },
   },
   plugins: [

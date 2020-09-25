@@ -9,7 +9,7 @@ const devConfig = {
   devtool: 'cheap-module-eval-source-map',
   plugins: [new Webpack.HotModuleReplacementPlugin()],
   devServer: {
-    port: 3000,
+    port: 4600,
     host: 'localhost',
     contentBase: path.join(__dirname, '../public'),
     watchContentBase: true,
