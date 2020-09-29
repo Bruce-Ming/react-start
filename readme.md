@@ -75,3 +75,11 @@ npm i @babel/runtime
 ```
 
 [参考](https://stackoverflow.com/questions/33527653/babel-6-regeneratorruntime-is-not-defined)
+
+> store 文件夹为 mobx 文件夹
+
+## 添加 mobx-state-tree
+
+```js
+yarn add mobx-state-tree
+```

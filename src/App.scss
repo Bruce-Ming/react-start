@@ -1,6 +1,8 @@
 .head {
     display: flex;
     list-style: none;
+    box-sizing: border-box;
+    // transform: scale(0.5);
 
     li {
         margin-left: 10px;

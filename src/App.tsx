@@ -6,6 +6,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { useStore, GlobalProvider } from '@stores/index';
 import * as style from './App.scss';
+import { TextState } from '@components/TextState';
+import { Mst } from '@components/Mst';
 
 const Notes = React.lazy(() => import('@components/Notes'));
 
@@ -28,7 +30,10 @@ const App = () => {
               <Link to="/users">Users</Link>
             </li>
             <li>
-              <Link to="/todo">todo</Link>
+              <Link to="/todo">mobx-todo</Link>
+            </li>
+            <li>
+              <Link to="/mst">MST</Link>
             </li>
           </ul>
         </nav>
@@ -44,7 +49,13 @@ const App = () => {
               <Notes />
             </React.Suspense>
           </Route>
+          <Route path="/mst">
+            <React.Suspense fallback={null}>
+              <Mst />
+            </React.Suspense>
+          </Route>
           <Route path="/">
+            <TextState />
             <div>主页测试</div>
             <div onClick={store.themeStore.toggleDarkMode}>{store.themeStore.isDarkMode}11111</div>
             <div>{store.mobxStore.name}</div>
