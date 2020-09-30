@@ -19,6 +19,7 @@ const Cart: React.FC<Props> = () => {
 
   return useObserver(() => (
     <div className="w-64 mx-auto mt-16">
+      <h1>Cart页面</h1>
       <p className="font-bold text-2xl text-center">Item Cart</p>
       <label className="block">
         <span className="text-gray-200">Name</span>
@@ -70,6 +71,7 @@ const Cart: React.FC<Props> = () => {
         {cart.items.map((item, index) => {
           return (
             <div
+              style={{ display: 'flex' }}
               key={`${item.name}-${index}`}
               className={`${
                 index !== 0 && 'mt-2'

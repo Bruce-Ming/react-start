@@ -42,8 +42,13 @@ export function useMst() {
   }
   return store;
 }
-
+// HACK: 此处可以优化
+// BUG: 此处有bug
+// NOTE: 代码说明
+// XXX: 实现方法待确认
+// FIXME:待修复
 // TODO: 无法返回正确的类型提现
+
 export function useMstByName(name: 'counter' | 'cart') {
   const store = useContext(RootStoreContext);
   if (store === null) {

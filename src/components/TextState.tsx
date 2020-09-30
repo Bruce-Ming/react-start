@@ -17,7 +17,7 @@ export class TextState extends Component {
 
         console.log(2, pre, this.state.count); // 1
         let a = Math.random() * 10;
-        console.log(a);
+        console.log('%c 严格模式下setState传入的第一个参数函数会执行两次', 'color:red;font-size:24px');
 
         return { count: a };
       },
@@ -32,6 +32,11 @@ export class TextState extends Component {
   }
 
   render() {
-    return <div>{`Count is: ${this.state.count}`}</div>;
+    return (
+      <>
+        <h1>类组件</h1>
+        <div>{`Count is: ${this.state.count}`}</div>
+      </>
+    );
   }
 }

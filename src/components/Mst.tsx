@@ -7,7 +7,7 @@ export const Mst = () => {
     <Provider value={rootStore}>
       <div className="container mx-auto">
         <div className="relative">
-          <h1 className="font-bold text-3xl text-center">react-hooks-mobx-state-tree</h1>
+          <h1>使用mobx-state-tree hooks 构建的测试</h1>
 
           <Counter />
           <Cart />
