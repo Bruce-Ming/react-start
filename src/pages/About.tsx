@@ -1,3 +1,4 @@
+import Topic from '@components/Topic';
 import React from 'react';
 import { Link, Route, Switch, useHistory, useParams, useRouteMatch } from 'react-router-dom';
 
@@ -28,19 +29,4 @@ const About = () => {
   );
 };
 
-const Topic = () => {
-  let history = useHistory();
-
-  let { topicId } = useParams() as { topicId: string };
-  console.log(useParams());
-  const goback = () => {
-    history.push('/about');
-  };
-  return (
-    <div>
-      <h3>Requested topic ID: {topicId}</h3>
-      <button onClick={goback}>返回about组件 </button>
-    </div>
-  );
-};
 export default About;

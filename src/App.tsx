@@ -8,33 +8,33 @@ import { GlobalProvider } from '@stores/index';
 import * as style from './App.scss';
 
 import { Mst } from '@components/Mst';
+import Routes from './routes/Routes';
 
 const Notes = React.lazy(() => import('@components/Notes'));
 
 const App = () => {
   return useObserver(() => (
-    <>
-      <Router>
-        <nav>
-          <ul className={style.head}>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <Link to="/todo">mobx-todo</Link>
-            </li>
-            <li>
-              <Link to="/mst">MST</Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
+    <Router>
+      <nav>
+        <ul className={style.head}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+          <li>
+            <Link to="/todo">mobx-todo</Link>
+          </li>
+          <li>
+            <Link to="/mst">MST</Link>
+          </li>
+        </ul>
+      </nav>
+      {/* <Switch>
           <Route path="/about">
             <About />
           </Route>
@@ -55,8 +55,10 @@ const App = () => {
             <div>主页</div>
           </Route>
         </Switch>
-      </Router>
-    </>
+
+       */}
+      <Routes />
+    </Router>
   ));
 };
 
