@@ -18,12 +18,12 @@ let config = [
       loader: () => import('../pages/About'),
       loading: () => null,
     }),
-    routes: [
+    children: [
       {
         path: '/about/:topicId',
         exact: true,
         component: Loadable({
-          loader: () => import('../components/Topic'),
+          loader: () => import('../pages/About'),
           loading: () => null,
         }),
       },

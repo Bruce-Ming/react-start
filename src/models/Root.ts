@@ -4,6 +4,7 @@ import { types, Instance, onSnapshot } from 'mobx-state-tree';
 import { Counter } from '@models/Counter';
 import { Cart } from '@models/Cart';
 
+//根模型
 const RootModel = types.model({
   counter: Counter,
   cart: Cart,
@@ -35,6 +36,7 @@ export type RootInstance = Instance<typeof RootModel>;
 const RootStoreContext = createContext<null | RootInstance>(null);
 
 export const Provider = RootStoreContext.Provider;
+// hook根组件
 export function useMst() {
   const store = useContext(RootStoreContext);
   if (store === null) {

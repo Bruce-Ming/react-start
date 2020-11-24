@@ -1,12 +1,12 @@
 import { types, flow } from 'mobx-state-tree';
 
-const wait2 = () => {
+function wait2() {
   return new Promise((res, rej) => {
     setTimeout(() => {
       res(4);
     }, 2000);
   });
-};
+}
 
 export const Counter = types
   .model({
