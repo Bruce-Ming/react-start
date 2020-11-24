@@ -55,8 +55,6 @@ const App = () => {
           <div>主页</div>
         </Route>
       </Switch>
-
-      {/* <Routes /> */}
     </Router>
   ));
 };
