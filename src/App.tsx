@@ -50,7 +50,8 @@ const App = () => {
           </React.Suspense>
         </Route>
         <Route path="/">
-          <div>主页</div>
+          <div style={{ textAlign: 'center' }}>主页</div>
+          <div> git Actions 测试</div>
         </Route>
       </Switch>
     </Router>
