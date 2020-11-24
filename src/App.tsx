@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import { GlobalProvider } from '@stores/index';
 import * as style from './App.scss';
-
-import Routes from './routes/Routes';
 import Hello from '@components/Hello';
 import Mst from '@components/Mst';
 import About from '@pages/About';
